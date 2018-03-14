@@ -22,7 +22,7 @@
     <link rel="alternative" href="/atom.xml" title="sojay" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/sojay-fav.png">
+    <link rel="icon" href="img/sojay-fav.jpg">
   
   <link rel="stylesheet" href="/css/style.css">
   
@@ -42,7 +42,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/img/sojay-avatar.png" class="js-avatar">
+			<img lazy-src="img/sojay-avatar.jpg" class="js-avatar">
 			
 		</a>
 
@@ -126,7 +126,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="/img/sojay-avatar.png" class="js-avatar">
+				<img lazy-src="img/sojay-avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">sojay</h1>
@@ -163,6 +163,8 @@
     </div>
   
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -220,6 +222,8 @@
     </div>
   
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -288,11 +292,13 @@
 </footer>
     </div>
     
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
 
 <script>
 	var yiliaConfig = {
-		fancybox: ,
-		mathjax: false,
+		fancybox: true,
+		mathjax: true,
 		animate: true,
 		isHome: true,
 		isPost: false,
@@ -304,6 +310,26 @@
 </script>
 <script src="/js/main.js"></script>
 
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
 
 
   </div>

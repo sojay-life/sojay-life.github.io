@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="sojay" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/sojay-fav.png">
+    <link rel="icon" href="img/sojay-fav.jpg">
   
   <link rel="stylesheet" href="/css/style.css">
   
@@ -43,7 +43,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/img/sojay-avatar.png" class="js-avatar">
+			<img lazy-src="img/sojay-avatar.jpg" class="js-avatar">
 			
 		</a>
 
@@ -127,7 +127,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="/img/sojay-avatar.png" class="js-avatar">
+				<img lazy-src="img/sojay-avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">sojay</h1>
@@ -162,6 +162,8 @@
     </div>
   
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -212,7 +214,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="Test-Book" data-title="Android 透明度百分比对应的 十六进制" data-url="http://yoursite.com/2018/03/13/Test-Book/"  data-images="/img/sojay-avatar.png" data-content="Android 透明度百分比对应的 十六进制">
+<div class="ds-share share" data-thread-key="Test-Book" data-title="Android 透明度百分比对应的 十六进制" data-url="http://yoursite.com/2018/03/13/Test-Book/"  data-images="img/sojay-avatar.jpg" data-content="Android 透明度百分比对应的 十六进制">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -246,11 +248,13 @@
 </footer>
     </div>
     
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
 
 <script>
 	var yiliaConfig = {
-		fancybox: ,
-		mathjax: false,
+		fancybox: true,
+		mathjax: true,
 		animate: true,
 		isHome: false,
 		isPost: true,
@@ -262,6 +266,26 @@
 </script>
 <script src="/js/main.js"></script>
 
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
 
 
   </div>
