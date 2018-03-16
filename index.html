@@ -104,7 +104,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a>
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/功能/" style="font-size: 10px;">功能</a>
 					</div>
 				</section>
 				
@@ -154,10 +154,74 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-android-changeHierarchy" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/03/15/hello-world/" class="article-date">
+      <a href="/2018/03/16/android-changeHierarchy/" class="article-date">
+  	<time datetime="2018-03-16T08:34:58.000Z" itemprop="datePublished">2018-03-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/16/android-changeHierarchy/">
+        android 改变view层级
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>首先要明白，android的层次由摆放view的先后顺序决定，也就是addView中的index，0表示最下面，越大越上面，不会超过容器的包含的View个数，（因为是数组下标）。</p>
+<h2 id="一-原始方法"><a href="#一-原始方法" class="headerlink" title="一: 原始方法"></a>一: 原始方法</h2><p>第一种方法，是最原始的方法。将一个view remove掉然后再加入进来，因为越后面加入的view，在越下面。</p>
+<p>如下代码展示了如何交换两个ImageView的层次。
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能/">功能</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2018/03/16/android-changeHierarchy/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-hexo-helloWorld" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/15/hexo-helloWorld/" class="article-date">
   	<time datetime="2018-03-15T12:36:01.000Z" itemprop="datePublished">2018-03-15</time>
 </a>
     </div>
@@ -171,7 +235,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/15/hello-world/">
+      <a class="article-title" href="/2018/03/15/hexo-helloWorld/">
         Hello World
         
       </a>
@@ -203,7 +267,7 @@
     </div>
       
         <p class="article-more-link">
-          <a  href="/2018/03/15/hello-world/#more">阅读全文 >></a>
+          <a  href="/2018/03/15/hexo-helloWorld/#more">阅读全文 >></a>
         </p>
       
     
