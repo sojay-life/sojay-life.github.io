@@ -104,7 +104,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/功能/" style="font-size: 10px;">功能</a>
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/功能/" style="font-size: 20px;">功能</a>
 					</div>
 				</section>
 				
@@ -154,11 +154,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-inject-variable" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-android-inject-variable" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/08/inject-variable/" class="article-date">
-  	<time datetime="2018-09-08T10:00:17.000Z" itemprop="datePublished">2018-09-08</time>
+      <a href="/2018/09/08/android-inject-variable/" class="article-date">
+  	<time datetime="2018-09-08T10:24:25.000Z" itemprop="datePublished">2018-09-08</time>
 </a>
     </div>
   
@@ -171,8 +171,8 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/08/inject-variable/">
-        inject_variable
+      <a class="article-title" href="/2018/09/08/android-inject-variable/">
+        Android-注解变量
         
       </a>
     </h1>
@@ -183,67 +183,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>开发中，当前端定义字段与服务端返回字段不一致，或服务端使用的是关键词(如：python的class)，可以使用简单的注解变量的方式来解决这样的问题了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@SerializedName(&quot;class&quot;)</span><br><span class="line">private String className;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>“class”为接口返回字段，</li>
+<li>“className”为本地使用字段，</li>
+<li>@SerializedName将接收到的“class”字段的数据赋值给“className”。</li>
+</ul>
+
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能/">功能</a></li></ul>
+	</div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-hexo-new-inject-variablehexo-new" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/09/08/hexo-new-inject-variablehexo-new/" class="article-date">
-  	<time datetime="2018-09-08T10:00:16.000Z" itemprop="datePublished">2018-09-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/08/hexo-new-inject-variablehexo-new/">
-         hexo new inject_variable hexo new 
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
       
 
       
