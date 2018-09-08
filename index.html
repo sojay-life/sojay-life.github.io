@@ -104,7 +104,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/功能/" style="font-size: 20px;">功能</a>
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 15px;">UI</a> <a href="/tags/功能/" style="font-size: 20px;">功能</a>
 					</div>
 				</section>
 				
@@ -154,6 +154,142 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Android-shoot" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/08/Android-shoot/" class="article-date">
+  	<time datetime="2018-09-08T12:03:56.000Z" itemprop="datePublished">2018-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/08/Android-shoot/">
+        Android-截屏
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="禁止截屏"><a href="#禁止截屏" class="headerlink" title="禁止截屏"></a><strong>禁止截屏</strong></h1><p>在 setContentView() 方法前加上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);</span><br></pre></td></tr></table></figure></p>
+<p>说明：如果在fragment中使用，只要在加载视图之前添加即可，不会影响该fragment所在的activity的截屏功能。</p>
+<h1 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a><strong>截屏</strong></h1><h2 id="常用方法分析"><a href="#常用方法分析" class="headerlink" title="常用方法分析"></a><strong>常用方法分析</strong></h2><p>Android系统并没有提供任何截屏检测的API，所以我们只能通过野路子来获取用户是否截屏了。<br>一般会采用一下三种方法：</p>
+<ul>
+<li><p>监听截屏图片所在目录变化（FileObserver）使用FileObserver，监听Screenshots目录下的文件变化；</p>
+</li>
+<li><p>监听媒体库的变化（ContentObserver）使用ContentObserver，监听MediaStore.Images.Media.EXTERNAL_CONTENT_URI资 源的变化；</p>
+</li>
+<li><p>重载（hook）截屏组合键（不靠谱），有的机型使用的是特殊手势进行截屏；</p>
+</li>
+</ul>
+<p>上面三种方法均不是万能的，需要结合使用才能达到良好的效果。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能/">功能</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2018/09/08/Android-shoot/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Android-getInput" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/08/Android-getInput/" class="article-date">
+  	<time datetime="2018-09-08T11:52:05.000Z" itemprop="datePublished">2018-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/08/Android-getInput/">
+        Android-获取输入法
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>获取Android手机的输入法，对部分输入法做适配<br>如：部分输入法默认显示数字键盘，无法切换到全键，需要默认显示全键盘</p>
+<h3 id="1-获取输入法列表"><a href="#1-获取输入法列表" class="headerlink" title="1.获取输入法列表"></a>1.获取输入法列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);</span><br><span class="line">List&lt;InputMethodInfo&gt; methodList = imm.getEnabledInputMethodList();</span><br><span class="line">for (InputMethodInfo mi : methodList) &#123;</span><br><span class="line">    CharSequence name = mi.loadLabel(getPackageManager());</span><br><span class="line">    System.out.println(&quot;@@@@@    method.name = &quot; + name);</span><br><span class="line">    if (name.equals(“三星中文输入法”) ||</span><br><span class="line">            name.equals(“ 三星键盘”) ||</span><br><span class="line">            name.equals(“谷歌拼音输入法”)) &#123;</span><br><span class="line">        	    //造作内容</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能/">功能</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2018/09/08/Android-getInput/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-android-special-layout" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -190,6 +326,10 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/">UI</a></li></ul>
+	</div>
+
       
 
       

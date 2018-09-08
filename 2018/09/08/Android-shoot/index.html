@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android-截屏 | sojay</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="禁止截屏在 setContentView() 方法前加上:1getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE); 说明：如果在fragment中使用，只要在加载视图之前添加即可，不会影响该fragment所在的activity的截屏功能。 截屏常用方法分析Android系统并没有提供任何截屏检测的API，">
+<meta name="keywords" content="功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android-截屏">
+<meta property="og:url" content="http://yoursite.com/2018/09/08/Android-shoot/index.html">
+<meta property="og:site_name" content="sojay">
+<meta property="og:description" content="禁止截屏在 setContentView() 方法前加上:1getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE); 说明：如果在fragment中使用，只要在加载视图之前添加即可，不会影响该fragment所在的activity的截屏功能。 截屏常用方法分析Android系统并没有提供任何截屏检测的API，">
+<meta property="og:updated_time" content="2018-09-08T12:35:53.708Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android-截屏">
+<meta name="twitter:description" content="禁止截屏在 setContentView() 方法前加上:1getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE); 说明：如果在fragment中使用，只要在加载视图之前添加即可，不会影响该fragment所在的activity的截屏功能。 截屏常用方法分析Android系统并没有提供任何截屏检测的API，">
+  
+    <link rel="alternative" href="/atom.xml" title="sojay" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">sojay</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">天之道损有余而补不足</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/UI/" style="font-size: 15px;">UI</a> <a href="/tags/功能/" style="font-size: 20px;">功能</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">sojay</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">sojay</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">天之道损有余而补不足</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Android-shoot" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/08/Android-shoot/" class="article-date">
+  	<time datetime="2018-09-08T12:03:56.000Z" itemprop="datePublished">2018-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android-截屏
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能/">功能</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="禁止截屏"><a href="#禁止截屏" class="headerlink" title="禁止截屏"></a><strong>禁止截屏</strong></h1><p>在 setContentView() 方法前加上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);</span><br></pre></td></tr></table></figure></p>
+<p>说明：如果在fragment中使用，只要在加载视图之前添加即可，不会影响该fragment所在的activity的截屏功能。</p>
+<h1 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a><strong>截屏</strong></h1><h2 id="常用方法分析"><a href="#常用方法分析" class="headerlink" title="常用方法分析"></a><strong>常用方法分析</strong></h2><p>Android系统并没有提供任何截屏检测的API，所以我们只能通过野路子来获取用户是否截屏了。<br>一般会采用一下三种方法：</p>
+<ul>
+<li><p>监听截屏图片所在目录变化（FileObserver）使用FileObserver，监听Screenshots目录下的文件变化；</p>
+</li>
+<li><p>监听媒体库的变化（ContentObserver）使用ContentObserver，监听MediaStore.Images.Media.EXTERNAL_CONTENT_URI资 源的变化；</p>
+</li>
+<li><p>重载（hook）截屏组合键（不靠谱），有的机型使用的是特殊手势进行截屏；</p>
+</li>
+</ul>
+<p>上面三种方法均不是万能的，需要结合使用才能达到良好的效果。</p>
+<a id="more"></a>
+<h2 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a><strong>第一种方法</strong></h2><p>在android中，我们可以通过FileObserver来监听目录变化，先来看看如何使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private static final File DIRECTORY_PICTURES = new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_PICTURES);</span><br><span class="line">private static final File DIRECTORY_DCIM = new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DCIM);</span><br><span class="line"></span><br><span class="line">if (manufacturer.equalsIgnoreCase(&quot;xiaomi&quot;)) &#123;</span><br><span class="line">  DIRECTORY_SCREENSHOT = new File(DIRECTORY_DCIM, &quot;Screenshots&quot;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  DIRECTORY_SCREENSHOT = new File(DIRECTORY_PICTURES, &quot;Screenshots&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">FILE_OBSERVER = new FileObserver(DIRECTORY_SCREENSHOT.getPath(), FileObserver.ALL_EVENTS) &#123;</span><br><span class="line">  @Override</span><br><span class="line">  public void onEvent(int event, String path) &#123;</span><br><span class="line">    if (event == FileObserver.CREATE) &#123;</span><br><span class="line">      String newPath = new File(DIRECTORY_SCREENSHOT, path).getAbsolutePath();</span><br><span class="line">      Log.d(TAG, &quot;path: &quot; + newPath);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>我们对指定目录的指定事件监听即可，当事件被触发时onEvent会回调。这里我们只关心目录中有没有新的文件生成。</p>
+<h3 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><ol>
+<li>在实践中发现，并不是所有手机都允许如此监听或者说都能收到回调。有的手机上面无法收到CREATE事件，但是可以收到其他事件。</li>
+<li>不同手机，监听的目录并不一致。小米需要监听Environment.DIRECTORY_DCIM，其他监听Environment.DIRECTORY_PICTURES即可。</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>关于FileObserver这里再多说两句，FileObserver无法进行递归监听，也就是说，我们监听的文件夹中如果有子文件夹，并且我们想知道其中变化，这种方式是不可行的。需要手动对子文件进行操作。</p>
+<p>另外，当我们监听的目录/文件被删除后又重新建立了一个同名的目录/文件，之前的FileObserver不会继续工作，需要重新设置监听才行。</p>
+<p>还要注意，FileObserver回调并不在主线程中，而是在FileObserver线程中。</p>
+<h2 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a><strong>第二种方式</strong></h2><p>监听媒体库变化。这个方法使用ContentObserver即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">private static final ContentObserver CONTENT_OBSERVER = new ContentObserver(HANDLER) &#123;</span><br><span class="line">  @Override</span><br><span class="line">  public void onChange(boolean selfChange, Uri uri) &#123;</span><br><span class="line">    //记得先检查读文件的权限</span><br><span class="line">    ContentResolver resolver = GeneralInfoHelper.getContext().getContentResolver();</span><br><span class="line">    if (uri.toString().matches(MediaStore.Images.Media.EXTERNAL_CONTENT_URI + &quot;(/\\d+)?&quot;)) &#123;</span><br><span class="line">      Cursor cursor = resolver.query(uri, PROJECTION, null, null, MediaStore.MediaColumns.DATE_ADDED + &quot; DESC&quot;);</span><br><span class="line">      if (cursor != null &amp;&amp; cursor.moveToFirst()) &#123;</span><br><span class="line">        //完整路径</span><br><span class="line">        String newPath = cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.DATA));</span><br><span class="line">        File file = new File(newPath);</span><br><span class="line">        //file.exists() 判断文件是否存在</span><br><span class="line">      &#125;</span><br><span class="line">      if (cursor != null) &#123;</span><br><span class="line">        cursor.close();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">getContentResolver().registerContentObserver(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, true, CONTENT_OBSERVER);</span><br></pre></td></tr></table></figure>
+<h3 id="遇到的坑-1"><a href="#遇到的坑-1" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><ol>
+<li>实践中发现，并不是所有手机都是监听相同的Uri，有的带数字，有的不带。</li>
+<li>查询数据库时记得按MediaStore.MediaColumns.DATE_ADDED字段排序，注意，这个时间单位是秒，不是毫秒。</li>
+<li>即使排了序，你拿到的仍然有可能不是正确的，在魅族E2上面出现了这个问题。但是当我删除了魅族E2截图文件夹之后，一切又恢复正常了……这里我做了一个简单的判断，如何DATE_ADDED和当前时间相差两秒以内，那么从数据库查出的这条数据我视为有效。</li>
+<li>当用户删除了截图文件夹的时候，媒体库此时会更新，所以此时onChange会收到大量回调，所以这里需要判断判断文件是否存在。</li>
+</ol>
+<p>可能有人会问，为什么不直接用第二种方法？<br>原因有2，首先从坑5可以看出第二种方法也并非100%有效，其次，这种方法速度很慢，通常会有2-3秒的延迟。而第一种方法如果有效，通常都会比后者快很多。</p>
+<h2 id="融合方法一、二"><a href="#融合方法一、二" class="headerlink" title="融合方法一、二"></a><strong>融合方法一、二</strong></h2><p>好了，障碍基本扫清，下面开始融合两种方法<br>首先使用成员变量记录截图文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private static String sScreenshotPath;</span><br></pre></td></tr></table></figure>
+<p>当方法1或者方法2收到结果时，用收到的结果与sScreenshotPath对比，如果是同一个文件，那么就无需再次通知了，否则则进行通知。</p>
+<p>逻辑很简单，代码就不写了。但是实际情况是不会这么乐观的。</p>
+<h3 id="遇到的坑-2"><a href="#遇到的坑-2" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><p>在实践中发现，有的系统不直接保存截图，而是先生成一个隐藏文件，比如叫.截图.jpg，然后再修改文件名（去掉“.”）。这种情况下，我们可能就会收到两次用户截图事件的回调（方法1和方法2都可能收到回调），但实际用户只截了一次。这里我做了一个特殊处理，在判断是否是同一个文件时，只判断文件名，而不去管文件的完整路径也不管文件是否隐藏（也就是不比较文件名前面的“.”）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//仅靠文件名而不是全路径判断是否为同一个截图文件，因为有些系统对截图有move操作</span><br><span class="line">private static boolean isSameFile(String newPath) &#123;</span><br><span class="line">  if (TextUtils.isEmpty(sScreenshotPath)) &#123;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return TextUtils.equals(removePrefixDot(new File(sScreenshotPath).getName()), removePrefixDot(new File(newPath).getName()));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private static String removePrefixDot(@NonNull String filename) &#123;</span><br><span class="line">  if (filename.startsWith(&quot;.&quot;)) &#123;</span><br><span class="line">    return filename.substring(1);</span><br><span class="line">  &#125;</span><br><span class="line">  return filename;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a><strong>最终方案</strong></h2><p>经过一番实验，最终方案终于出炉【手动撒花】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">public final class RxScreenshotDetector &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TAG = &quot;RxScreenshotDetector&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String[] PROJECTION = new String[] &#123;</span><br><span class="line">            MediaStore.Images.Media.DISPLAY_NAME,</span><br><span class="line">        MediaStore.Images.Media.DATA,</span><br><span class="line">            MediaStore.Images.Media.DATE_ADDED</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //判断截图时间 3s</span><br><span class="line">    private static final long DEFAULT_DETECT_WINDOW_SECONDS = 3;</span><br><span class="line"></span><br><span class="line">    private final Activity mActivity;</span><br><span class="line">    private final RxPermissions mRxPermissions;</span><br><span class="line"></span><br><span class="line">    private RxScreenshotDetector(final Activity activity) &#123;</span><br><span class="line">        mActivity = activity;</span><br><span class="line">        mRxPermissions = new RxPermissions(activity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Observable&lt;String&gt; start(final Activity activity) &#123;</span><br><span class="line">        return new RxScreenshotDetector(activity)</span><br><span class="line">                .start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     * 判断路径中是否含有特有名称   判定是否是截图文件</span><br><span class="line">     */</span><br><span class="line">    private static boolean matchPath(String path) &#123;</span><br><span class="line">        return path.toLowerCase().contains(&quot;screenshot&quot;) || path.contains(&quot;截屏&quot;) ||path.contains(&quot;截图&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     * 根据时间判定   </span><br><span class="line">     * 原定1.5s  发现有的手机时间较长，延长到3s</span><br><span class="line">     */</span><br><span class="line">    private static boolean matchTime(long currentTime, long dateAdded) &#123;</span><br><span class="line">        return Math.abs(currentTime/ 1000 - dateAdded) &lt;= DEFAULT_DETECT_WINDOW_SECONDS;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Observable&lt;String&gt; start() &#123;</span><br><span class="line">        return mRxPermissions</span><br><span class="line">                .request(Manifest.permission.READ_EXTERNAL_STORAGE)</span><br><span class="line">                .flatMap(granted -&gt; &#123;</span><br><span class="line">                    if (granted) &#123;</span><br><span class="line">                        return startAfterPermissionGranted(mActivity);</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return Observable.error(new SecurityException(&quot;Permission not granted&quot;));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Observable&lt;String&gt; startAfterPermissionGranted(final Context context) &#123;</span><br><span class="line">        final ContentResolver contentResolver = context.getContentResolver();</span><br><span class="line"></span><br><span class="line">        return Observable.create(emitter -&gt; &#123;</span><br><span class="line">            final ContentObserver contentObserver = new ContentObserver(null) &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onChange(boolean selfChange, Uri uri) &#123;</span><br><span class="line">                    Cursor cursor = null;</span><br><span class="line">                    try &#123;</span><br><span class="line">                        cursor = contentResolver.query(uri, PROJECTION, null, null, MediaStore.Images.Media.DATE_ADDED + &quot; DESC&quot;);</span><br><span class="line">                        // 特别说明</span><br><span class="line">                        // 必须以【DATE_ADDED】为查询条件  DATA_ADDED表示最后【添加】为条件</span><br><span class="line">                        // 【DATA_MODIFIED】是最后【修改】时间为条件</span><br><span class="line">                        // 在大部分机型上，两者查询结果一致；部分机型按 DATA_MODIFIED 查询不包含最新添加的截图。</span><br><span class="line">                        if (cursor != null &amp;&amp; cursor.moveToFirst()) &#123;</span><br><span class="line">                            String path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));</span><br><span class="line">                            long dateAdded = cursor.getLong(cursor.getColumnIndex(MediaStore.Images.Media.DATE_ADDED));</span><br><span class="line">                            long currentTime = System.currentTimeMillis();</span><br><span class="line">                            if (matchPath(path) &amp;&amp; matchTime(currentTime, dateAdded)) &#123;</span><br><span class="line">                    //是截图</span><br><span class="line">                    Log.d(TAG, &quot;path: &quot; + path + &quot;, dateAdded: &quot; + dateAdded + &quot;, currentTime: &quot; + currentTime);</span><br><span class="line">                                emitter.onNext(path);</span><br><span class="line">                            &#125; else &#123;</span><br><span class="line">                    //不是截图，打印路径查找原因</span><br><span class="line">                    Log.e(TAG, &quot;can&apos;t Sceenshot   path: &quot; + path + &quot;, dateAdded: &quot; + dateAdded + &quot;, currentTime: &quot; + currentTime);</span><br><span class="line">                &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; catch (Exception e) &#123;</span><br><span class="line">                        Log.e(TAG, &quot;open cursor fail&quot;);</span><br><span class="line">                    &#125; finally &#123;</span><br><span class="line">                        if (cursor != null) &#123;</span><br><span class="line">                            cursor.close();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    super.onChange(selfChange, uri);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            contentResolver.registerContentObserver(</span><br><span class="line">                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI, true, contentObserver);</span><br><span class="line"></span><br><span class="line">            emitter.setCancellable(</span><br><span class="line">                    () -&gt; contentResolver.unregisterContentObserver(contentObserver));</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/08/Android-getInput/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android-获取输入法</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="Android-shoot" data-title="Android-截屏" data-url="http://yoursite.com/2018/09/08/Android-shoot/"  data-images="/img/avatar.jpg" data-content="Android-截屏">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 sojay
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
