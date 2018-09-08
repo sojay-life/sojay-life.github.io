@@ -154,6 +154,64 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-android-special-layout" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/08/android-special-layout/" class="article-date">
+  	<time datetime="2018-09-08T11:45:33.000Z" itemprop="datePublished">2018-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/08/android-special-layout/">
+        Android-特殊布局
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/2018/09/08/android-special-layout/android-special-layout.png" alt="布局图片"><br>如图,发送按钮位置保持不变,text_one与text_two长度不固定,限制为单行, [ text_two始终在text_one后方,跟随text_one长度变化 ] .</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2018/09/08/android-special-layout/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-android-inject-variable" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -237,7 +295,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2018/03/16/android-changeHierarchy/">
-        android 改变view层级
+        Android-改变view层级
         
       </a>
     </h1>
@@ -250,7 +308,7 @@
       
         <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>首先要明白，android的层次由摆放view的先后顺序决定，也就是addView中的index，0表示最下面，越大越上面，不会超过容器的包含的View个数，（因为是数组下标）。</p>
 <h2 id="一-原始方法"><a href="#一-原始方法" class="headerlink" title="一: 原始方法"></a>一: 原始方法</h2><p>第一种方法，是最原始的方法。将一个view remove掉然后再加入进来，因为越后面加入的view，在越下面。</p>
-<p>如下代码展示了如何交换两个ImageView的层次。
+<p>如下代码展示了如何交换两个ImageView的层次。</p>
       
     </div>
     
@@ -314,7 +372,8 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br>“My New Post”为文章名和本地.md的文件名<br>当文章名中不含有空格时，可直接使用<br><code>$ hexo new name</code></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br>“My New Post”为文章名和本地.md的文件名<br>当文章名中不含有空格时，可直接使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new name</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -365,7 +424,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2018/03/13/android-alpha/">
-        Android 透明度百分比对应的 十六进制
+        Android-透明度百分比对应的十六进制
         
       </a>
     </h1>
@@ -377,7 +436,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="计算-说明-百分比计算出来会有小数-按照常规的四舍五入处理"><a href="#计算-说明-百分比计算出来会有小数-按照常规的四舍五入处理" class="headerlink" title="计算: (说明:百分比计算出来会有小数,按照常规的四舍五入处理)"></a>计算: (说明:百分比计算出来会有小数,按照常规的四舍五入处理)</h2><p>写个简单的java程序即可:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class ToHex &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;透明度百分比对应的十六进制:&quot;);</span><br><span class="line">        for (int i = 0; i &lt;= 100; i++) &#123;</span><br><span class="line">            float temp=255*i*1.0f/100f;</span><br><span class="line">            int round = Math.round(temp);//四舍五入</span><br><span class="line">            String hexString = Integer.toHexString(round);</span><br><span class="line">            if (hexString.length()&lt;2) &#123;</span><br><span class="line">                hexString+=&quot;0&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;    百分比:&quot;+i+&quot;%&quot;+&quot;  HEX: &quot;+hexString.toUpperCase());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="具体比例值"><a href="#具体比例值" class="headerlink" title="具体比例值:"></a>具体比例值:
+<h2 id="具体比例值"><a href="#具体比例值" class="headerlink" title="具体比例值:"></a>具体比例值:</h2>
       
     </div>
     
